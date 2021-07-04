@@ -27,10 +27,10 @@ export class ServerSocket {
         args?: unknown
     ) {
         return this.socket.write(
-            JSON.stringify({
+            `${JSON.stringify({
                 eventName,
                 data: JSON.stringify(args || {}),
-            })
+            })}\n`
         );
         // return super.emit(event, ...args);
     }
