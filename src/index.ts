@@ -15,7 +15,8 @@ server.on(ServerEvent.INIT, () => {
         console.log(`new player connected: ${socket.id}`);
         socket.emit(SocketEvent.HELLO, { id: socket.id });
 
-        socket.emit(SocketEvent.CHUNK, world.chunks[0]);
+        const c = world.chunks[0];
+        socket.emit(SocketEvent.CHUNK, c.toJson());
 
         socket.eventSystem.on(SocketEvent.DISCONNECT, () => {
             console.log("Player disconnected.");

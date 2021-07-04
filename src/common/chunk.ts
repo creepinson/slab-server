@@ -8,4 +8,13 @@ export class Chunk {
     origin: Vector2 = new Vector2();
 
     data: Vector3[] = [];
+
+    toJson() {
+        return {
+            frequency: this.frequency,
+            dimensions: this.dimensions.toObject({}),
+            origin: this.origin.toObject({}),
+            data: this.data.map((d) => d.toObject({})),
+        };
+    }
 }
