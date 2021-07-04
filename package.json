@@ -1,0 +1,29 @@
+{
+    "name": "gl",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node .",
+        "dev": "set DEBUG=socket.io && ts-node-dev src/index.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/express": "^4.17.12",
+        "@types/node": "^16.0.0",
+        "prettier": "^2.3.2",
+        "typescript": "^4.3.5"
+    },
+    "dependencies": {
+        "@math.gl/core": "^3.4.3",
+        "@thi.ng/colored-noise": "^0.1.35",
+        "@thi.ng/dsp": "^3.0.21",
+        "eventemitter3": "^4.0.7",
+        "express": "^4.17.1",
+        "fast-simplex-noise": "^4.0.0",
+        "nanoid": "^3.1.23"
+    }
+}
