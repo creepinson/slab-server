@@ -1,6 +1,5 @@
 import * as net from "net";
 import EventEmitter from "eventemitter3";
-import { World } from "./common/world";
 import {
     ServerEvent,
     ServerEventType,
@@ -30,7 +29,7 @@ export class ServerSocket {
         return this.socket.write(
             JSON.stringify({
                 eventName,
-                args: args || {},
+                data: JSON.stringify(args || {}),
             })
         );
         // return super.emit(event, ...args);
